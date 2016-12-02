@@ -5,7 +5,7 @@
 .font-h1() {
   color: @black-color;
   font-size: 27px;
-  font-weight: 700;
+  .font-bold();
   text-align: center;
   margin: 0;
 }
@@ -13,7 +13,7 @@
 .font-h2() {
   color: @black-color;
   font-size: 25px;
-  font-weight: 700;
+  .font-bold();
   margin: 0;
 }
 
@@ -21,14 +21,14 @@
   color: @black-color;
   font-size: 17px;
   line-height: 24px;
-  font-weight: 700;
+  .font-bold();
 }
 
 .font-bold17() {
   color: @black-color;
   font-size: 17px;
   line-height: 24px;
-  font-weight: 700;
+  .font-bold();
 }
 
 .visual() {
@@ -45,4 +45,8 @@
 
 .visual-y() {
   border: 2px solid yellow;
+}
+
+.font-bold() {
+  font-family: 'Open Sans Bold';
 }
