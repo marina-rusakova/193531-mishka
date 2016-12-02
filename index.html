@@ -3,27 +3,32 @@
 <head>
   <meta charset="utf-8">
   <title>Магазин "Мишка"</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="page-header">
     <div class="container">
       <div class="page-header__logo">
-        <img src="http://placehold.it/150x100" alt="Логотип">
+        <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип"> 
+      </div>
+
+      <div class="page-header__menu-toggle">
+        <button  type="button">Открыть меню</button>
       </div>
 
       <nav class="main-nav  main-nav--closed">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <ul class="main-nav__items">
-          <li class="main-nav__item  main-nav__item--active">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
             <a href="#">Каталог товаров</a>
           </li>
-          <li class="main-nav__item  main-nav__item--active">
+          <li class="main-nav__item">
             <a href="#">Вязяние на заказ</a>
           </li>
-          <li class="main-nav__item  main-nav__item--active">
+          <li class="main-nav__item">
             <a href="#">Поиск по сайту</a>
           </li>
-          <li class="main-nav__item  main-nav__item--active">
+          <li class="main-nav__item">
             <a href="#">Корзина: пока пуста</a>
           </li>
         </ul>
@@ -33,21 +38,28 @@
 
 
   <main>
-    <div class="container">
-      <section class="our-products">
-        <div class="our-products__header">
-          <h1 class="our-products__title">Милые штуки <br>ручной работы <br>для дома</h1>
-        </div>
-        <div class="our-products__btns--wrapper">
-          <div class="our-products__btns">
-            <a class="our-products__btn  our-products__btn--interior" href="">Предметы <br>интерьера</a>
-          </div>
-          <div class="our-products__btns">
-            <a class="our-products__btn  our-products__btn--toys" href="">Детские <br>игрушки</a>
-          </div>
-        </div>
-      </section>
+    
+    <section class="our-products">
+      <div class="our-products__header">
+        <h1 class="our-products__title">Милые штуки <br>ручной работы <br>для дома</h1>
+      </div>
+      <div class="our-products__btns--wrapper">
+        <a class="our-products__btns" href="">
+          <div class="our-products__btn  our-products__btn--interior">Предметы <br>интерьера</div>
+        </a>
+        <a class="our-products__btns" href="">
+          <div class="our-products__btn  our-products__btn--toys">Детские <br>игрушки</div>
+        </a>
+        <!-- <div class="our-products__btns"> -->
+          <!-- <a class="our-products__btn  our-products__btn--interior" href="">Предметы <br>интерьера</a> -->
+        <!-- </div> -->
+        <!-- <div class="our-products__btns"> -->
+          <!-- <a class="our-products__btn  our-products__btn--toys" href="">Детские <br>игрушки</a> -->
+        <!-- </div> -->
+      </div>
+    </section>
 
+    <div class="container">
       <section class="product-week">
         <div class="product-week__header">
           <h2 class="product-week__title">Вязаные корзинки</h2>
@@ -72,14 +84,17 @@
         </table>
 
         <div class="product-week__photo">
-           <img src="http://placehold.it/150x100" alt="Вязаные корзинки">
+          <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
         </div>
 
         <div class="product-week__order">
           <p class="product-week__price">Цена: 990 руб.</p>
-          <div class="product-week__btn">
-            <a class="btn" href="#">ЗАКАЗАТЬ</a>
-          </div>
+          <a class="product-week__btn" href="">
+            <div class="btn">ЗАКАЗАТЬ</div>
+          </a>
+          <!-- <div class="product-week__btn"> -->
+            <!-- <a class="btn" href="#">ЗАКАЗАТЬ</a> -->
+          <!-- </div> -->
         </div>
       </section>
 
@@ -107,10 +122,14 @@
           <button class="reviews__btn  reviews__btn--preview"></button>
           <button class="reviews__btn  reviews__btn--next"></button>
         </div>
-        
-        <div class="reviews__btn">
-          <a class="btn" href="#">НАПИСАТЬ</a>
-        </div>
+
+        <a class="reviews__btn" href="">
+          <div class="btn">НАПИСАТЬ</div>
+        </a>
+
+        <!-- <div class="reviews__btn"> -->
+          <!-- <a class="btn" href="#">НАПИСАТЬ</a> -->
+        <!-- </div> -->
       </section>
     </div>
 
@@ -133,9 +152,12 @@
       <div class="contacts__map"></div>
 
       <div class="container">
-        <div class="contacts__btn">
-          <a class="btn" href="#">НАПИШИТЕ НАМ</a>
-        </div>
+        <a class="contacts__btn" href="">
+          <div class="btn">НАПИШИТЕ НАМ</div>
+        </a>
+        <!-- <div class="contacts__btn"> -->
+          <!-- <a class="btn" href="#">НАПИШИТЕ НАМ</a> -->
+        <!-- </div> -->
       </div>
     </section>
   </main>
@@ -145,13 +167,13 @@
     <div class="container">
       <section class="page-footer__social">
         <a class="social-link  social-link--inst" href="#">Инстаграм</a>
-        <a class="social-link social-link--fb" href="#">Фейсбук</a>
-        <a class="social-link social-link--tw" href="#">Твиттер</a>
+        <a class="social-link  social-link--fb" href="#">Фейсбук</a>
+        <a class="social-link  social-link--tw" href="#">Твиттер</a>
       </section>
 
       <div class="page-footer__copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/">
-          <span class="copyright-text">Разработано</span>
+          <span class="copyright__text">Разработано</span>
         </a>
       </div>
     </div>
