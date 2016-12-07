@@ -1,14 +1,125 @@
 .order-item {
-  /*.visual();*/
-  /*margin-bottom: 30px;*/
   border: none;
   border-top: 1px solid @blue-color;
 }
 
+.order-item--type {
+  min-height: 171px;
+
+  .order-item__control {
+    padding: 20px 0 9px 0;
+  }
+
+}
+
+.order-item--color {
+  min-height: 416px;
+
+  .order-item__control {
+    padding: 20px 0 22px 0;
+  }
+
+}
+
+.order-item--name {
+  min-height: 329px;
+
+  .order-item__field {
+    width: 100%;
+    border: none;
+  }
+
+}
+
+.order-item--tel {
+  min-height: 106px;
+}
+
+.order-item--mail {
+  min-height: 106px;
+}
+
+.order-item--comment {
+  .visual-y();
+  min-height: 195px;
+  margin-bottom: 19px;
+}
+
 .order-item__title {
+  color: @blue-color;
+  font-size: 17px;
+  line-height: 16px;
+  .font-bold();
+  text-transform: uppercase;
   padding: 15px 0;
 }
 
 .order-item__control {
-  padding: 15px 0;
+  color: @black-color;
+  font-size: 17px;
+  line-height: 18px;
+  .font-bold();
+}
+
+@media @tablet-widths {
+
+  .order-item {
+    border: none;
+  }
+
+  .order-item--type {
+    min-height: 233px;
+  }
+
+  .order-item--color {
+    min-height: 304px;
+
+    .order-item__control {
+      display: inline-block;
+      width: 230px;
+    }
+
+  }
+
+  .order-item--name {
+    min-height: 305px;
+  }
+
+  .order-item--tel {
+    min-height: 112px;
+  }
+
+  .order-item--mail {
+    min-height: 115px;
+  }
+
+  .order-item--comment {
+    min-height: 190px;
+    margin-bottom: 55px;
+  }
+
+  .order-item-wrapper {
+    background-color: #f1f1f1;
+  }
+
+  .order-form__btn {
+    margin: 0;
+  }
+
+}
+
+@media @desktop-widths {
+
+  .order-item--color {
+    min-height: 225px;
+  }
+
+  .order-item--name {
+
+    .order-item__field {
+      width: auto;
+    }
+
+  }
+
 }

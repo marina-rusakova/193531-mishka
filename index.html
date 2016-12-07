@@ -7,23 +7,23 @@
 </head>
 <body>
   <header class="page-header">
-    <div class="container">
-      <div class="page-header__logo">
-        <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип">
+    <div class="page-header__logo"></div>
+
+    <nav class="main-nav  main-nav--closed">
+      <div class="main-nav__menu-toggle">
+        <button class="main-nav__btn" type="button"></button>
       </div>
 
-      <div class="page-header__menu-toggle">
-        <button  type="button">Открыть меню</button>
-      </div>
-
-      <nav class="main-nav  main-nav--closed">
-        <ul class="main-nav__list">
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__items">
           <li class="main-nav__item">
             <a href="#">Каталог товаров</a>
           </li>
           <li class="main-nav__item">
             <a href="#">Вязяние на заказ</a>
           </li>
+        </ul>
+        <ul class="main-nav__user-items">
           <li class="main-nav__item">
             <a href="#">Поиск по сайту</a>
           </li>
@@ -31,17 +31,17 @@
             <a href="#">Корзина: пока пуста</a>
           </li>
         </ul>
-      </nav>
-    </div>
+      </div>
+    </nav>
   </header>
 
 
   <main>
-
     <section class="our-products">
       <div class="our-products__header">
         <h1 class="our-products__title">Милые штуки <br>ручной <br>работы для дома</h1>
       </div>
+
       <div class="our-products__btns--wrapper">
         <a class="our-products__btns" href="">
           <div class="our-products__btn  our-products__btn--interior">Предметы <br>интерьера</div>
@@ -57,14 +57,13 @@
         <!-- </div> -->
       </div>
     </section>
+    <section class="product-week">
+      <div class="product-week__header">
+        <h2 class="product-week__title">Вязаные корзинки</h2>
+        <span class="product-week__topic">товар недели</span>
+      </div>
 
-    <div class="container">
-      <section class="product-week">
-        <div class="product-week__header">
-          <h2 class="product-week__title">Вязаные корзинки</h2>
-          <span class="product-week__topic">товар недели</span>
-        </div>
-
+      <div class="product-week__wrapper">
         <p class="product-week__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
 
         <table class="product-week__options">
@@ -81,34 +80,39 @@
             <td>15см</td>
           </tr>
         </table>
+      </div>
 
-        <div class="product-week__photo">
-          <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
-        </div>
+      <div class="product-week__photo">
+        <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
+      </div>
 
-        <div class="product-week__order">
-          <p class="product-week__price">Цена: 990 руб.</p>
-          <a class="product-week__btn" href="">
-            <div class="btn">ЗАКАЗАТЬ</div>
-          </a>
-          <!-- <div class="product-week__btn"> -->
-            <!-- <a class="btn" href="#">ЗАКАЗАТЬ</a> -->
-          <!-- </div> -->
-        </div>
-      </section>
+      <div class="product-week__order">
+        <p class="product-week__price">Цена: 990 руб.</p>
 
-      <section class="about-us">
-        <h2 class="about-us__title">Коротко о нас:</h2>
+          <div class="product-week__btn">
+            <a class="btn" href="#">ЗАКАЗАТЬ</a>
+          </div>
+      </div>
+    </section>
 
+    <section class="about-us">
+      <h2 class="about-us__title">Коротко о нас:</h2>
+
+      <div class="about-us__list  about-us__list--first">
         <p class="about-us__item  about-us__item--eco">Экологически чистые материалы</p>
         <p class="about-us__item  about-us__item--style">Скандинавский стиль по российской цене</p>
         <p class="about-us__item  about-us__item--likes">Увеличивает лайки на фотографиях</p>
-        <p class="about-us__item  about-us__item--hand">Связано вручную с любовью и умилением</p>
+      </div>
+
+      <div class="about-us__list  about-us__list--second">
+        <p class="about-us__item  about-us__item--hand">Связано вручную <br>с любовью и умилением</p>
         <p class="about-us__item  about-us__item--support">Поддержка отечественного производителя</p>
         <p class="about-us__item  about-us__item--delivery">Поставляется в подарочной упаковке</p>
-      </section>
+      </div>
+    </section>
 
-      <section class="reviews">
+    <section class="reviews">
+      <div class="reviews__wrapper">
         <h2 class="reviews__title">Отзывы</h2>
 
         <div class="reviews__item">
@@ -118,52 +122,48 @@
         </div>
 
         <div class="reviews__btns">
-          <button class="reviews__btn  reviews__btn--preview"></button>
-          <button class="reviews__btn  reviews__btn--next"></button>
+          <button class="reviews__btn-slider  reviews__btn-slider--preview"></button>
+          <button class="reviews__btn-slider  reviews__btn-slider--next"></button>
         </div>
 
-        <a class="reviews__btn" href="">
-          <div class="btn">НАПИСАТЬ</div>
-        </a>
-
-        <!-- <div class="reviews__btn"> -->
-          <!-- <a class="btn" href="#">НАПИСАТЬ</a> -->
-        <!-- </div> -->
-      </section>
-    </div>
+        <div class="reviews__btn">
+          <a class="btn" href="#">НАПИСАТЬ</a>
+        </div>
+      </div>
+    </section>
 
     <section class="contacts">
-      <div class="container">
+      <div class="contacts__wrapper contacts-inf-wrapper">
         <h3 class="contacts__title">Контакты</h3>
 
-        <table class="contacts__information">
-          <tr>
-            <td>e-mail:</td>
-            <td>info@mimimishkashop.ru</td>
-          </tr>
-          <tr>
-            <td>адрес:</td>
-            <td>г.Санкт-Петербург,<br> ул.Большая <br>Конюшенная, <br>д. 19/8, офис 101</td>
-          </tr>
-        </table>
+        <article class="contacts__information">
+          <ul class="row">
+            <li class="column">e-mail:</li>
+            <li>info@mimimishkashop.ru</li>
+          </ul>
+
+          <ul>
+            <li>адрес:</li>
+            <li>г.Санкт-Петербург,<br> ул.Большая <br>Конюшенная, <br>д. 19/8, офис 101</li>
+          </ul>
+        </article>
       </div>
 
       <div class="contacts__map"></div>
 
-      <div class="container">
-        <a class="contacts__btn" href="">
-          <div class="btn">НАПИШИТЕ НАМ</div>
-        </a>
-        <!-- <div class="contacts__btn"> -->
-          <!-- <a class="btn" href="#">НАПИШИТЕ НАМ</a> -->
-        <!-- </div> -->
+      <div class="contacts__wrapper">
+        <div class="contacts__btn">
+          <a class="btn" href="#">НАПИШИТЕ НАМ</a>
+        </div>
       </div>
     </section>
   </main>
 
 
   <footer class="page-footer">
-    <div class="container">
+    <div class="page-footer__wrapper">
+      <div class="page-footer__logo"></div>
+
       <section class="page-footer__social">
         <a class="social-link  social-link--inst" href="#">Инстаграм</a>
         <a class="social-link  social-link--fb" href="#">Фейсбук</a>

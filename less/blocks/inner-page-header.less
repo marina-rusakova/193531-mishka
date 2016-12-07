@@ -1,8 +1,47 @@
 .inner-page-header {
+  opacity: 0.6;
+  .container();
+  .clearfix();
   .visual();
-  padding: 20px 0;
+  min-height: 80px;
 }
 
 .inner-page-header__logo {
-  text-align: center;
+  margin: 0 auto;
+  width: 86px;
+  height: 35px;
+  padding-top: 22px;
+  background: url("../img/logo-mobile.svg") no-repeat;
+  background-position-y: 22px;
+}
+
+@media @tablet-widths {
+
+  .inner-page-header {
+    .container();
+    .clearfix();
+    min-height: 90px;
+
+  }
+
+  .inner-page-header__logo {
+    float: left;
+    width: 113px;
+    height: 46px;
+  }
+
+}
+
+@media @desktop-widths {
+
+  .inner-page-header__logo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 149px;
+    height: 72px;
+  }
+
 }

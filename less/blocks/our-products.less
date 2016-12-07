@@ -1,23 +1,24 @@
 .our-products {
+  opacity: 0.6;
   .visual();
+  background: url("../img/hero-mobile@1x.jpg") no-repeat center;
+  background-position-y: -20px;
 }
 
 .our-products__header {
   .font-bold();
-  height: 90px;
-  background: url("../img/hero-mobile@1x.jpg") no-repeat center;
-  padding-top: 75px;
-  padding-bottom: 120px;
-  .visual-b();
+  min-height: 192px;
+  padding-top: 70px;
+  padding-bottom: 20px;
 }
 
 .our-products__btns--wrapper {
   .visual-b();
+  font-size: 0;
 }
 
 .our-products__btns {
   text-decoration: none;
-
 }
 
 .our-products__btn {
@@ -25,7 +26,7 @@
   font-size: 19px;
   line-height: 24px;
   .font-bold();
-  padding: 30px 0px 35px 30px;
+  padding: 25px 0px 30px 30px;
 }
 
 .our-products__btn--interior {
@@ -39,4 +40,42 @@
 .our-products__title {
   .font-h1();
   text-align: center;
+}
+
+@media @tablet-widths {
+
+  .our-products {
+    min-height: 743px;
+    background-size: cover;
+    background-position-y: -20px;
+    .container();
+    .clearfix();
+    margin-bottom: 30px;
+  }
+
+  .our-products__header {
+    min-height: 536px;
+  }
+
+  .our-products__btns {
+    .inline-block();
+    /*min-height: 120px;*/
+    width: 50%;
+  }
+
+  .our-products__btn {
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 27px;
+    padding-left: 35px;
+  }
+
+}
+
+@media @desktop-widths {
+
+  .our-products {
+    margin-bottom: 70px;
+  }
+
 }

@@ -1,10 +1,20 @@
 .contacts {
+  opacity: 0.6;
+  .clearfix();
   .visual();
   margin-bottom: 40px;
 }
 
+.contacts__wrapper {
+  .container();
+}
+
+.contacts-inf-wrapper {
+  margin-bottom: 40px;
+}
+
 .contacts__title {
-  padding: 40px 0 30px 0;
+  padding: 40px 0 25px 0;
   color: @black-color;
   font-size: 18px;
   .font-bold();
@@ -12,16 +22,98 @@
 }
 
 .contacts__information {
-  .visual-b();
-  margin-bottom: 35px;
+  display: table;
+  .visual-y();
+}
+
+.column {
+  width: 75px;
+}
+
+.row {
+  height: 60px;
+}
+
+.contacts__information ul {
+  display: table-row;
+}
+
+.contacts__information li {
+  display: table-cell;
 }
 
 .contacts__map {
   background: url("../img/map-mobile@1x.jpg") no-repeat;
   height: 455px;
+  margin-bottom: 40px;
 }
 
 .contacts__btn {
   text-decoration: none;
   text-align: center;
+}
+
+@media @tablet-widths {
+
+  .contacts {
+    min-height: 875px;
+    margin-bottom: 60px;
+  }
+
+  .contacts__map {
+    background-size: cover;
+    margin-bottom: 55px;
+  }
+
+  .contacts__information {
+    display:  block;
+  }
+
+  .contacts__information li,
+  .contacts__information ul {
+    display: inline-block;
+  }
+
+  .contacts-inf-wrapper {
+    margin-bottom: 32px;
+    min-height: 280px;
+  }
+
+}
+
+@media @desktop-widths {
+
+  .contacts {
+    position: relative;
+    .container-right();
+    min-height: 457px;
+    padding-top: 80px;
+    margin-bottom: 105px;
+  }
+
+  .contacts__wrapper {
+    float: left;
+    width: 350px;
+  }
+
+  .contacts__map {
+    float: right;
+    width: 525px;
+    height: 457px;
+    background-size: cover;
+    margin-bottom: 0;
+  }
+
+  .contacts__information {
+    display: table;
+  }
+
+  .contacts__information ul {
+  display: table-row;
+  }
+
+  .contacts__information li {
+    display: table-cell;
+  }
+
 }
