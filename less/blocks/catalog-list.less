@@ -1,8 +1,35 @@
 .catalog-list {
+	opacity: 0.6;
+  .container();
+  .clearfix();
   .visual();
+  padding-top: 7px;
   margin-bottom: 30px;
 }
 
 .catalog-list :last-child {
   margin-bottom: 0;
+}
+
+@media @tablet-widths {
+
+  .catalog-list {
+    min-height: 660px;
+    margin-bottom: 50px;
+  }
+
+}
+
+@media @desktop-widths {
+
+  .catalog-list {
+    min-height: 660px;
+    margin-bottom: 57px;
+    font-size: 0;
+  }
+
+  .catalog-list :last-child {
+    margin-right: 0;
+  }
+
 }

@@ -7,25 +7,25 @@
 </head>
 <body>
   <header class="inner-page-header">
-    <div class="container">
-      <div class="inner-page-header__logo">
-        <a class="logo" href="index.html">
-          <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип">
-        </a>
+    <a href="index.html">
+      <div class="inner-page-header__logo"></div>
+    </a>
+
+    <nav class="main-nav  main-nav--closed">
+      <div class="main-nav__menu-toggle">
+        <button class="main-nav__btn" type="button"></button>
       </div>
 
-      <div class="inner-page-header__menu-toggle">
-        <button  type="button">Открыть меню</button>
-      </div>
-
-      <nav class="main-nav  main-nav--closed">
-        <ul class="main-nav__list">
-          <li class="main-nav__item  main-nav__item--active">
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__items">
+          <li class="main-nav__item">
             <a href="#">Каталог товаров</a>
           </li>
           <li class="main-nav__item">
             <a href="#">Вязяние на заказ</a>
           </li>
+        </ul>
+        <ul class="main-nav__user-items">
           <li class="main-nav__item">
             <a href="#">Поиск по сайту</a>
           </li>
@@ -33,99 +33,97 @@
             <a href="#">Корзина: пока пуста</a>
           </li>
         </ul>
-      </nav>
-    </div>
+      </div>  
+    </nav>
   </header>
 
 
   <main>
-    <div class="container">
-      <h1 class="page-title">Каталог товаров</h1>
-
-      <section class="catalog-list">
-        <article class="catalog-list__item  product-item">
-          <div class="product-item__photo">
-            <a class="photo" href="#">
-              <img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зaйчик-попрыгайчик">
-            </a>
-          </div>
-
-          <div class="product-item__inf">
-            <a class="product-item__title" href="#">Зaйчик-попрыгайчик</a>
-            <p class="product-item__parameters">Рост 30 см, вес 200 г</p>
-          </div>
-
-          <div class="product-item__buy">
-            <span class="product-item__price">1200 руб.</span>
-            <a class="product-item__cart" href="#"></a>
-          </div>
-        </article>
-
-        <article class="catalog-list__item  product-item">
-          <div class="product-item__photo">
-            <a class="photo" href="#">
-              <img src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
-            </a>
-          </div>
-
-          <div class="product-item__inf">
-            <a class="product-item__title" href="#">Корзинка для белья</a>
-            <p class="product-item__parameters">Диаметр 15 см, высота 10 см</p>
-          </div>
-
-          <div class="product-item__buy">
-            <span class="product-item__price">690 руб.</span>
-            <a class="product-item__cart" href="#"></a>
-          </div>
-        </article>
-
-        <article class="catalog-list__item  product-item">
-          <div class="product-item__photo">
-            <a class="photo" href="#">
-              <img  src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
-            </a>
-          </div>
-
-          <div class="product-item__inf">
-            <a class="product-item__title" href="#">Большая корзинка для игрушек</a>
-            <p class="product-item__parameters">Диаметр 30 см, высота 30 см</p>
-          </div>
-
-          <div class="product-item__buy">
-            <span class="product-item__price">1500 руб.</span>
-            <a class="product-item__cart" href="#"></a>
-          </div>
-        </article>
-      </section>
-
-      <section class="production-process">
-        <h4 class="production-process__title">Процесс производства</h4>
-
-        <div class="production-process__video">
-          <!-- <video> -->
-            <!-- <source src="#" type="#"> -->
-          <!-- </video> -->
-          <img src="img/video-mobile@1x.jpg" width="260" height="150" alt="video">
-        </div>
-
-        <div class="production-process__wrapper">
-          <p class="production-process__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
-
-          <a class="production-process__btn" href="">
-            <div class="btn">СДЕЛАТЬ ЗАКАЗ</div>
-          </a>
-
-          <!-- <div class="production-process__btn"> -->
-            <!-- <a class="btn" href="#">СДЕЛАТЬ ЗАКАЗ</a> -->
-          <!-- </div> -->
-        </div>
-      </section>
+    <div class="page-title">
+      <h1 class="page-title__name">Каталог товаров</h1>
     </div>
+    
+    <section class="catalog-list">
+      <article class="catalog-list__item  product-item">
+        <div class="product-item__photo">
+          <a class="photo" href="#">
+            <img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зaйчик-попрыгайчик">
+          </a>
+        </div>
+
+        <div class="product-item__inf">
+          <a class="product-item__title" href="#">Зaйчик-попрыгайчик</a>
+          <p class="product-item__parameters">Рост 30 см, вес 200 г</p>
+        </div>
+
+        <div class="product-item__buy">
+          <span class="product-item__price">1200 руб.</span>
+          <a class="product-item__cart" href="#">Корзина</a>
+        </div>
+      </article>
+
+      <article class="catalog-list__item  product-item">
+        <div class="product-item__photo">
+          <a class="photo" href="#">
+            <img src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
+          </a>
+        </div>
+
+        <div class="product-item__inf">
+          <a class="product-item__title" href="#">Корзинка для белья</a>
+          <p class="product-item__parameters">Диаметр 15 см, высота 10 см</p>
+        </div>
+
+        <div class="product-item__buy">
+          <span class="product-item__price">690 руб.</span>
+          <a class="product-item__cart" href="#">Корзина</a>
+        </div>
+      </article>
+
+      <article class="catalog-list__item  product-item">
+        <div class="product-item__photo">
+          <a class="photo" href="#">
+            <img  src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
+          </a>
+        </div>
+
+        <div class="product-item__inf">
+          <a class="product-item__title" href="#">Большая корзинка для игрушек</a>
+          <p class="product-item__parameters">Диаметр 30 см, высота 30 см</p>
+        </div>
+
+        <div class="product-item__buy">
+          <span class="product-item__price">1500 руб.</span>
+          <a class="product-item__cart" href="#">Корзина</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="production-process">
+      <h4 class="production-process__title">Процесс производства</h4>
+
+      <div class="production-process__video">
+        <!-- <video> -->
+          <!-- <source src="#" type="#"> -->
+        <!-- </video> -->
+        <img src="img/video-mobile@1x.jpg" width="260" height="150" alt="video">
+      </div>
+
+      <div class="production-process__wrapper">
+        <p class="production-process__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
+
+        <div class="production-process__btn">
+          <a class="btn" href="#">СДЕЛАТЬ ЗАКАЗ</a>
+        </div>
+      </div>
+    </section>
   </main>
 
 
   <footer class="page-footer">
-    <div class="container">
+    <div class="page-footer__wrapper">
+      <div class="page-footer__logo"></div>
+
       <section class="page-footer__social">
         <a class="social-link  social-link--inst" href="#">Инстаграм</a>
         <a class="social-link  social-link--fb" href="#">Фейсбук</a>

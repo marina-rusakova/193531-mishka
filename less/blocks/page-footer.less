@@ -1,16 +1,22 @@
 .page-footer {
+  opacity: 0.6;
+  .clearfix();
   background-color: #f1f1f1;
   .visual();
 }
 
+.page-footer__wrapper {
+  .container();
+}
+
 .page-footer__social {
-  padding: 25px 0;
+  min-height: 80px;
   text-align: center;
-  .visual-b();
+  .visual-y();
 }
 
 .page-footer__copyright {
-  padding: 25px 0;
+  min-height: 80px;
   text-align: center;
   .visual-b();
 }
@@ -24,4 +30,24 @@
   font-size: 19px;
   line-height: 18px;
   .font-bold();
+}
+
+@media @tablet-widths {
+    
+  .page-footer {
+    min-height: 142px;
+  }
+
+  .page-footer__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-footer__logo {
+    width: 86px;
+    height: 35px;
+    background: url("../img/logo-mobile.svg") no-repeat;
+  }
+
 }
