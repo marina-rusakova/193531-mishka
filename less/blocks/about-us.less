@@ -1,14 +1,75 @@
 .about-us {
+  opacity: 0.6;
+  min-height: 825px;
+  .container();
+  .clearfix();
   .visual();
 }
 
 .about-us__title {
   .font-h2();
-  padding: 30px 0;
+  padding: 35px 0 25px 0;
   .visual-b();
 }
 
 .about-us__item {
   .font-bold17();
-  padding: 60px 0 30px 0;
+  line-height: 19px;
+  padding: 60px 0 25px 0;
 }
+
+@media @tablet-widths {
+
+    .about-us {
+      min-height: 618px;
+      margin-bottom: 30px;
+    }
+
+    .about-us__title {
+      min-height: 70px;
+    }
+
+    .about-us__list {
+      width: 50%;
+        &--first {
+          float: left;
+        }
+
+        &--second {
+          float: right;
+        }
+    }
+
+    .about-us__item {
+      font-size: 20px;
+      line-height: 24px;
+      padding: 80px 0 27px 0;
+    }
+
+  }
+
+  @media @desktop-widths {
+
+    .about-us {
+      .container-about-us();
+      min-height: 615px;
+      margin-bottom: 60px;
+    }
+
+    .about-us__title {
+      font-size: 53px;
+      line-height: 57px;
+      padding: 70px 0 10px 0;
+    }
+
+    .about-us__list {
+      width: 33.3%;
+        &--first {
+          width: 50%;
+        }
+
+        &--second {
+          width: 50%;
+        }
+    }
+  }
