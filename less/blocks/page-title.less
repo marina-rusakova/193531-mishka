@@ -1,32 +1,60 @@
 .page-title {
-  color: red;
-  opacity: 0.6;
+  /*opacity: 0.6;*/
   background-color: #f1f1f1;
-  .visual-y();
-  min-height: 175px;
-  margin-bottom: 23px;
+  /*.visual-y();*/
+  margin-bottom: 22px;
+  border-top: 1px solid #cecece;
 }
 
 .page-title__name {
-  opacity: 0.6;
   .font-h1();
-  padding: 70px 0 75px 0;
+  padding: 70px 0 76px 0;
 }
 
 @media @tablet-widths {
 
   .page-title {
-    min-height: 222px;
-    margin-bottom: 80px;
+    position: relative;
+    margin-bottom: 75px;
+
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      bottom: 0px;
+      left: 0; 
+      width: 100%;
+      height: 10px;
+      background: url("../img/zigzag.png");
+      background-repeat: repeat-x;
+    }
+
   }
+
+  .page-title__name {
+  font-size: 43px;
+  line-height: 50px;
+  padding: 95px 0 76px 0;
+}
 
 }
 
 @media @desktop-widths {
 
   .page-title {
-    min-height: 250px;
-    margin-bottom: 130px;
+    margin-bottom: 122px;
+
+    &:after {
+      height: 16px;
+      background-size: 10%;
+    }
+
+  }
+
+  .page-title__name {
+    font-size: 53px;
+    line-height: 57px;
+    padding: 93px 0 102px 0;
   }
 
 }
