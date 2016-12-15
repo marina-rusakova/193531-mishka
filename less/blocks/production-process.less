@@ -1,16 +1,28 @@
 .production-process {
-  opacity: 0.6;
+  /*opacity: 0.6;*/
   .container();
-  .visual();
-  min-height: 502px;
-  margin-bottom: 59px;
+  /*.visual();*/
+  margin-bottom: 58px;
 }
 
 .production-process__title {
+  position: relative;
   .font-bold17();
-  padding: 24px 0;
-  margin: 0 30px;
-  .visual-b();
+  padding: 23px 29px 24px 89px;
+  /*.visual-b();*/
+  border: 1px solid #cecece;
+  border-bottom: none;
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 29px;
+    left: 34px;
+    width: 32px;
+    height: 32px;
+    background: url("../img/icon-video.svg");
+  }
 }
 
 .production-process__video {
@@ -19,12 +31,14 @@
 }
 
 .production-process__wrapper {
-  margin: 0 34px;
-  .visual-g();
+  padding: 0 33px 32px 33px;
+  /*.visual-g();*/
+  border: 1px solid #cecece;
+  border-top: none;
 }
 
 .production-process__description {
-  padding: 25px 0;
+  padding: 26px 0 26px 0;
   font-size: 13px;
   line-height: 24px;
 }
@@ -40,7 +54,7 @@
     display: flex;
     flex-direction: column;
     min-height: 743px;
-    margin-bottom: 65px;
+    margin-bottom: 63px;
   }
 
   .production-process__video {
@@ -49,9 +63,19 @@
     width: 100%;
   }
 
-  .production-process__wrapper,
   .production-process__title  {
-    margin: 0 41px;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 39px 40px 6px 106px;
+
+    &:after {
+      top: 34px;
+      left: 41px;
+    }
+  }
+
+  .production-process__wrapper {
+    padding: 0 40px 45px 40px;
   }
 
   .production-process__btn {
@@ -63,7 +87,9 @@
   }
 
   .production-process__description {
-    margin-bottom: 22px;
+    font-size: 15px;
+    line-height: 30px;
+    margin-bottom: 9px;
   }
 
 }
@@ -72,23 +98,35 @@
 
   .production-process {
     display: block;
-
     min-height: 455px;
     margin-bottom: 105px;
   }
 
-  .production-process__title,
   .production-process__wrapper {
     float: right;
-    width: 230px;
-    margin-right: 60px;
+    width: 231px;
+    padding: 0px 57px 60px 78px;
+  }
 
+  .production-process__title  {
+    float: right;
+    width: 148px;
+    padding: 93px 140px 7px 78px;
+
+    &:after {
+      top: 40px;
+      left: 80px;
+    }
   }
 
   .production-process__video {
     float: left;
     width: 682px;
     height: 455px;
+  }
+
+  .production-process__description {
+    margin-bottom: 21px;
   }
 
 }

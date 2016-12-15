@@ -1,7 +1,7 @@
 .contacts {
-  opacity: 0.6;
+  /*opacity: 0.6;*/
   .clearfix();
-  .visual();
+  /*.visual();*/
   margin-bottom: 40px;
 }
 
@@ -10,24 +10,24 @@
 }
 
 .contacts-inf-wrapper {
-  margin-bottom: 40px;
+  margin-bottom: 37px;
 }
 
 .contacts__title {
-  padding: 40px 0 25px 0;
+  padding: 34px 0 26px 0;
   color: @black-color;
   font-size: 18px;
   .font-bold();
-  .visual-b();
+  /*.visual-b();*/
 }
 
 .contacts__information {
   display: table;
-  .visual-y();
+  /*.visual-y();*/
 }
 
 .column {
-  width: 75px;
+  width: 77px;
 }
 
 .row {
@@ -44,8 +44,8 @@
 
 .contacts__map {
   background: url("../img/map-mobile@1x.jpg") no-repeat;
-  height: 455px;
-  margin-bottom: 40px;
+  height: 457px;
+  margin-bottom: 39px;
 }
 
 .contacts__btn {
@@ -56,8 +56,40 @@
 @media @tablet-widths {
 
   .contacts {
-    min-height: 875px;
-    margin-bottom: 60px;
+    margin-bottom: 57px;
+  }
+
+  .contacts__title {
+    position: relative;
+    font-size: 43px;
+    line-height: 50px;
+    padding: 61px 0 49px 0;
+
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 46px;
+      right: 3px;
+      width: 47px;
+      height: 82px;
+      background: url("../img/icon-flag.svg");
+    }
+
+  }
+
+  .contacts__information {
+    font-size: 17px;
+    .column {
+      width: 73px;
+    }
+    .row {
+      width: 329px;
+    }
+
+    .column2 {
+      width: 72px;
+    }
   }
 
   .contacts__map {
@@ -71,11 +103,11 @@
 
   .contacts__information li,
   .contacts__information ul {
-    display: inline-block;
+    .inline-block();
   }
 
   .contacts-inf-wrapper {
-    margin-bottom: 32px;
+    margin-bottom: 26px;
     min-height: 280px;
   }
 
@@ -87,13 +119,50 @@
     position: relative;
     .container-right();
     min-height: 457px;
-    padding-top: 80px;
+    padding-top: 71px;
     margin-bottom: 105px;
   }
 
   .contacts__wrapper {
     float: left;
     width: 350px;
+  }
+
+  .contacts-inf-wrapper {
+    margin-bottom: 79px;
+  }
+
+  .contacts__title {
+    font-size: 53px;
+    line-height: 57px;
+    padding-top: 70px;
+
+    &:after {
+      top: 61px;
+      left: -111px;
+      width: 47px;
+      height: 82px;
+      background: url("../img/icon-flag.svg");
+    }
+
+  }
+
+  .contacts__information {
+    display: table;
+    font-size: 17px;
+
+    ul {
+      display: table-row;
+    }
+
+    li {
+      display: table-cell;
+    }
+
+    .column {
+      width: 77px;
+    }
+
   }
 
   .contacts__map {
@@ -104,16 +173,8 @@
     margin-bottom: 0;
   }
 
-  .contacts__information {
-    display: table;
-  }
-
-  .contacts__information ul {
-  display: table-row;
-  }
-
-  .contacts__information li {
-    display: table-cell;
+  .contacts__btn {
+    float: left;
   }
 
 }
