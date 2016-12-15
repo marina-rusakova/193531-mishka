@@ -1,41 +1,96 @@
 .page-footer {
-  opacity: 0.6;
-  .clearfix();
+  /*opacity: 0.6;*/
   background-color: #f1f1f1;
-  .visual();
+  // .visual();
+
 }
 
 .page-footer__wrapper {
   .container();
+  .clearfix();
 }
 
 .page-footer__social {
   min-height: 80px;
   text-align: center;
-  .visual-y();
+  /*.visual-y();*/
+}
+
+.page-footer__social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 150px;
+  padding-right: 5px;
+  font-size: 0;
+}
+
+.social-link__item {
+  .inline-block();
+  width: 32px;
+  height: 34px;
+}
+
+.social-link {
+  display: inline-block;
+  vertical-align: middle;
+
+  &--inst {
+    width: 22px;
+    height: 21px;
+    background: url("../img/icon-insta.svg");
+  }
+
+  &--fb {
+    width: 15px;
+    height: 28px;
+    background: url("../img/icon-fb.svg");
+  }
+
+  &--tw {
+    width: 23px;
+    height: 20px;
+    background: url("../img/icon-twitter.svg");
+  }
+
 }
 
 .page-footer__copyright {
-  min-height: 80px;
-  text-align: center;
-  .visual-b();
+  position: relative;
+  min-height: 79px;
+  border-top: 1px solid #cecece;
+  /*.visual-b();*/
 }
 
 .copyright__link {
   text-decoration: none;
-}
-
-.copyright__text {
   color: @black-color;
   font-size: 19px;
   line-height: 18px;
   .font-bold();
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 18px;
+    right: 33px;
+    width: 40px;
+    height: 40px;
+    background: url("../img/htmlacademy.svg");
+  }
+
+  p {
+    padding-top: 26px;
+    padding-left: 38px;
+  }
 }
 
 @media @tablet-widths {
 
   .page-footer {
-    min-height: 142px;
+    height: 142px;
   }
 
   .page-footer__wrapper {
@@ -48,6 +103,37 @@
     width: 86px;
     height: 35px;
     background: url("../img/logo-mobile.svg") no-repeat;
+  }
+
+  .page-footer__social {
+    margin-left: 170px;
+    padding-top: 34px;
+    padding-bottom: 29px;
+  }
+
+  .page-footer__copyright {
+    width: 183px;
+    min-height: 40px;
+    border-top: none;
+
+    p {
+      padding-top: 10px;
+      padding-left: 0;
+    }
+  }
+
+  .copyright__link {
+    &:after {
+      top: 0px;
+      right: -7px;
+    }
+  }
+}
+
+@media @desktop-widths {
+
+  .page-footer__social {
+    margin-left: 361px;
   }
 
 }

@@ -1,10 +1,11 @@
 .catalog-list {
-  opacity: 0.6;
+  /*opacity: 0.6;*/
   .container();
   .clearfix();
-  .visual();
-  padding-top: 7px;
-  margin-bottom: 30px;
+  /*.visual();*/
+  /*margin-bottom: 30px;*//*необходимый*/
+  margin-bottom: 26px; /*для поехавшего текста*/
+  padding-top: 8px;
 }
 
 .catalog-list :last-child {
@@ -15,7 +16,7 @@
 
   .catalog-list {
     min-height: 660px;
-    margin-bottom: 50px;
+    margin-bottom: 52px;
   }
 
 }
@@ -23,13 +24,10 @@
 @media @desktop-widths {
 
   .catalog-list {
+    display: flex;
     min-height: 660px;
     margin-bottom: 57px;
     font-size: 0;
-  }
-
-  .catalog-list :last-child {
-    margin-right: 0;
   }
 
 }

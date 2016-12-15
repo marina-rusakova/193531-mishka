@@ -3,36 +3,50 @@
 <head>
   <meta charset="utf-8">
   <title>Магазин "Мишка"</title>
+  <link href="css/normalize.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header class="inner-page-header">
-    <a href="index.html">
-      <div class="inner-page-header__logo"></div>
-    </a>
 
-    <nav class="main-nav  main-nav--closed">
-      <div class="main-nav__menu-toggle">
-        <button class="main-nav__btn" type="button"></button>
+  <header class="inner-page-header">
+    <nav class="main-nav  main-nav--closed  main-nav--nojs">
+      <div class="inner-page-header__logo">
+        <a class="logo" href="index.html">
+          <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип">
+        </a>
       </div>
 
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__items">
-          <li class="main-nav__item">
-            <a href="#">Каталог товаров</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#">Вязяние на заказ</a>
-          </li>
-        </ul>
-        <ul class="main-nav__user-items">
-          <li class="main-nav__item">
-            <a href="#">Поиск по сайту</a>
-          </li>
-          <li class="main-nav__item">
-            <a href="#">Корзина: пока пуста</a>
-          </li>
-        </ul>
+      <button class="main-nav__toggle" type="button">Открыть меню</button>
+
+      <ul class="main-nav__items">
+        <li class="main-nav__item">
+          <a href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="form.html">Вязaние на заказ</a>
+        </li>
+      </ul>
+
+      <ul class="main-nav__user-items">
+        <li class="main-nav__item">
+          <a class="main-nav__item-search" href="#">Поиск по сайту</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__item-cart" href="#">Корзина: пока пуста</a>
+        </li>
+      </ul>
+
+      <ul class="main-nav__sale-items">
+        <li class="main-nav__item">
+          <a href="#">Новые поступления</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#">Распродажа</a>
+        </li>
+      </ul>
+
+      <div class="main-nav__item  main-nav__item-delivery">
+        <a href="#">Бесплатная доставка по России</a>
       </div>
     </nav>
   </header>
@@ -51,14 +65,16 @@
           </a>
         </div>
 
-        <div class="product-item__inf">
-          <a class="product-item__title" href="#">Зaйчик-попрыгайчик</a>
-          <p class="product-item__parameters">Рост 30 см, вес 200 г</p>
-        </div>
+        <div class="product-item__wrapper">
+          <div class="product-item__inf">
+            <a class="product-item__title" href="#">Зaйчик-попрыгайчик</a>
+            <p class="product-item__parameters">Рост 30 см, вес 200 г</p>
+          </div>
 
-        <div class="product-item__buy">
-          <span class="product-item__price">1200 руб.</span>
-          <a class="product-item__cart" href="#">Корзина</a>
+          <div class="product-item__buy">
+            <span class="product-item__price">1 200 руб.</span>
+            <a class="product-item__cart" href="#">Корзина</a>
+          </div>
         </div>
       </article>
 
@@ -69,14 +85,16 @@
           </a>
         </div>
 
-        <div class="product-item__inf">
-          <a class="product-item__title" href="#">Корзинка для белья</a>
-          <p class="product-item__parameters">Диаметр 15 см, высота 10 см</p>
-        </div>
+        <div class="product-item__wrapper">
+          <div class="product-item__inf">
+            <a class="product-item__title" href="#">Корзинка для белья</a>
+            <p class="product-item__parameters">Диаметр 15 см, высота 10 см</p>
+          </div>
 
-        <div class="product-item__buy">
-          <span class="product-item__price">690 руб.</span>
-          <a class="product-item__cart" href="#">Корзина</a>
+          <div class="product-item__buy">
+            <span class="product-item__price">690 руб.</span>
+            <a class="product-item__cart" href="#">Корзина</a>
+          </div>
         </div>
       </article>
 
@@ -87,19 +105,22 @@
           </a>
         </div>
 
-        <div class="product-item__inf">
-          <a class="product-item__title" href="#">Большая корзинка для игрушек</a>
-          <p class="product-item__parameters">Диаметр 30 см, высота 30 см</p>
-        </div>
+        <div class="product-item__wrapper">
+          <div class="product-item__inf">
+            <a class="product-item__title" href="#">Большая корзинка<br> для игрушек</a>
+            <p class="product-item__parameters">Диаметр 30 см, высота 30 см</p>
+          </div>
 
-        <div class="product-item__buy">
-          <span class="product-item__price">1500 руб.</span>
-          <a class="product-item__cart" href="#">Корзина</a>
+          <div class="product-item__buy">
+            <span class="product-item__price">1 500 руб.</span>
+            <a class="product-item__cart" href="#">Корзина</a>
+          </div>
         </div>
       </article>
     </section>
 
     <section class="production-process">
+
       <h4 class="production-process__title">Процесс производства</h4>
 
       <div class="production-process__video">
@@ -125,17 +146,25 @@
       <div class="page-footer__logo"></div>
 
       <section class="page-footer__social">
-        <a class="social-link  social-link--inst" href="#">Инстаграм</a>
-        <a class="social-link  social-link--fb" href="#">Фейсбук</a>
-        <a class="social-link  social-link--tw" href="#">Твиттер</a>
+        <div class="social-link__item">
+          <a class="social-link  social-link--inst" href="#">Инстаграм</a>
+        </div>
+
+        <div class="social-link__item">
+          <a class="social-link  social-link--fb" href="#">Фейсбук</a>
+        </div>
+
+        <div class="social-link__item">
+          <a class="social-link  social-link--tw" href="#">Твиттер</a>
+        </div>
       </section>
 
       <div class="page-footer__copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/">
-          <span class="copyright__text">Разработано</span>
-        </a>
+        <a class="copyright__link" href="https://htmlacademy.ru/"><p>Разработано</p></a>
       </div>
     </div>
   </footer>
+  <script src="js/script.js">
+  </script>
 </body>
 </html>
