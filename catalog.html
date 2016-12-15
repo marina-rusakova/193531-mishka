@@ -61,7 +61,11 @@
       <article class="catalog-list__item  product-item">
         <div class="product-item__photo">
           <a class="photo" href="#">
-            <img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="Зaйчик-попрыгайчик">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.jpg, img/photo-1-tablet@2x.jpg 2x">
+              <img src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x"  alt="Зaйчик-попрыгайчик">
+            </picture>
           </a>
         </div>
 
@@ -81,7 +85,11 @@
       <article class="catalog-list__item  product-item">
         <div class="product-item__photo">
           <a class="photo" href="#">
-            <img src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.jpg, img/photo-2-tablet@2x.jpg 2x">
+              <img src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x"  alt="Корзинка для белья">
+            </picture>
           </a>
         </div>
 
@@ -101,7 +109,11 @@
       <article class="catalog-list__item  product-item">
         <div class="product-item__photo">
           <a class="photo" href="#">
-            <img  src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x">
+              <img src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x"  alt="Большая корзинка для игрушек">
+            </picture>
           </a>
         </div>
 
@@ -124,10 +136,11 @@
       <h4 class="production-process__title">Процесс производства</h4>
 
       <div class="production-process__video">
-        <!-- <video> -->
-          <!-- <source src="#" type="#"> -->
-        <!-- </video> -->
-        <img src="img/video-mobile@1x.jpg" width="260" height="150" alt="video">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+          <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x"  alt="video">
+        </picture>
       </div>
 
       <div class="production-process__wrapper">
