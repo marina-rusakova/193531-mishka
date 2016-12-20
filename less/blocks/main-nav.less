@@ -10,6 +10,7 @@
   z-index: 2;
   border: none;
   font-size: 0;
+  outline: 0;
   cursor: pointer;
 }
 
@@ -31,10 +32,11 @@
 
 .main-nav__item {
   .font-bold17();
-  padding: 27px 30px 27px 75px;
+  padding: 27px 30px 27px 30px;
 }
 
 .main-nav__item a {
+  padding-left: 45px;
   display: block;
   position: relative;
   text-decoration: none;
@@ -52,40 +54,65 @@
 
 }
 
+.main-nav__item-search,
+.main-nav__item-cart {
+
+  svg {
+    position: absolute;
+    opacity: 0.2;
+    fill: #231F20;
+  }
+
+  &:hover {
+
+    svg {
+      fill: @blue-color;
+      opacity: 1;
+    }
+    
+  }
+
+  &:active {
+
+    svg {
+      fill: @blue-color;
+      opacity: 0.3;
+    }
+    
+  }
+
+}
+
 .main-nav__item-search {
 
-  &::before {
-    content: "";
-    position: absolute;
+  svg {
     top: 4px;
-    left: -43px;
-    width: 18px;
-    height: 18px;
-    background-image: url("../img/icon-search.svg");
-    opacity: 0.2;
+    left: 2px;
   }
 
 }
 
 .main-nav__item-cart {
 
-  &::before {
-    content: "";
-    position: absolute;
+  svg {
     top: 3px;
-    left: -45px;
-    width: 20px;
-    height: 19px;
-    background-image: url("../img/icon-cart.svg");
-    opacity: 0.2;
+    left: 0px;
   }
-
+  
 }
+
 
 @media @mobile-widths-only {
 
   .main-nav__item {
     background-color: @white-color;
+    padding: 27px 0;
+
+    a {
+      width: 215px;
+      margin: 0 auto;
+    }
+
   }
 
   .main-nav--opened .main-nav__items {
@@ -149,6 +176,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .container();
   }
 
   .main-nav__toggle {
@@ -172,6 +200,10 @@
     padding: 27px 0 27px 0;
   }
 
+  .main-nav__item a {
+    padding-left: 0;
+  }
+
   .main-nav__items .main-nav__item {
     font-size: 15px;
     margin-right: 36px;
@@ -193,13 +225,13 @@
   .main-nav__user-items .main-nav__item {
     padding: 32px 0 32px 0;
     border-left: 1px solid #ececec;
-    padding-left: 82px;
+    padding-left: 83px;
   }
 
   .main-nav__item-search {
     font-size: 0;
 
-    &::before {
+    svg {
       top: 4px;
       left: -50px;
     }
@@ -208,7 +240,7 @@
 
   .main-nav__item-cart {
 
-    &::before {
+    svg {
       top: 3px;
       left: -52px;
     }

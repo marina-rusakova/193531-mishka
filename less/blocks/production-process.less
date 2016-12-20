@@ -5,36 +5,54 @@
   margin-bottom: 58px;
 }
 
-.production-process__title {
+.production-process__header {
   position: relative;
-  .font-bold17();
-  padding: 23px 29px 24px 89px;
-  /*.visual-b();*/
-  border: 1px solid #cecece;
+  border: 1px solid #ececec;
   border-bottom: none;
-
-  &:after {
-    content: "";
+  svg {
     position: absolute;
     z-index: 1;
     top: 29px;
     left: 34px;
-    width: 32px;
-    height: 32px;
-    background: url("../img/icon-video.svg");
+    fill: @blue-color; 
   }
 }
 
+.production-process__title {
+  .font-bold17();
+  padding: 23px 29px 24px 89px;
+  /*.visual-b();*/
+}
+
 .production-process__video {
+  position: relative;
   .visual-b();
   width: 260px;
   height: 150px;
 }
 
+.production-process__play {
+  position: absolute;
+  width: 121px;
+  height: 92px;
+  top: 30px;
+  left: 70px;
+  background: url("../img/icon-play.svg") no-repeat 50% 50%;
+  background-size: 101px 77px;
+
+  &:hover {
+    background-size: 121px 92px;
+  }
+
+  &:active {
+    background-size: 81px 62px;
+  }
+}
+
 .production-process__wrapper {
   padding: 0 33px 32px 33px;
   /*.visual-g();*/
-  border: 1px solid #cecece;
+  border: 1px solid #ececec;
   border-top: none;
 }
 
@@ -64,15 +82,23 @@
     width: 668px;
   }
 
+  .production-process__play {
+    top: 189px;
+    left: 274px;
+  }
+
+  .production-process__header {
+
+    svg {
+      top: 35px;
+      left: 42px;
+    }
+  }
+
   .production-process__title  {
     font-size: 20px;
     line-height: 24px;
     padding: 39px 40px 6px 106px;
-
-    &:after {
-      top: 34px;
-      left: 41px;
-    }
   }
 
   .production-process__wrapper {
@@ -101,6 +127,14 @@
     display: block;
     min-height: 455px;
     margin-bottom: 105px;
+    
+    &:hover {
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    }
   }
 
   .production-process__wrapper {
@@ -109,21 +143,28 @@
     padding: 0px 57px 60px 78px;
   }
 
-  .production-process__title  {
+  .production-process__header {
     float: right;
-    width: 148px;
-    padding: 93px 140px 7px 78px;
-
-    &:after {
+    svg {
       top: 40px;
       left: 80px;
     }
+  }
+
+  .production-process__title  {
+    width: 148px;
+    padding: 93px 140px 7px 78px;
   }
 
   .production-process__video {
     float: left;
     width: 682px;
     height: 455px;
+  }
+
+  .production-process__play {
+    top: 181px;
+    left: 289px;
   }
 
   .production-process__description {

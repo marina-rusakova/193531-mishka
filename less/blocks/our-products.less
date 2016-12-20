@@ -1,14 +1,14 @@
 .our-products {
   position: relative;
-  opacity: 0.6;
+  /*opacity: 0.6;*/
   /*.visual();*/
-  background: url("../img/hero-mobile@1x.jpg") no-repeat center;
+  background: #f9f9f9 url("../img/hero-mobile@1x.jpg") no-repeat center;
   background-position-y: -18px;
-  border-top: 1px solid #cecece;
+  border-top: 1px solid #ececec;
 
   @media (min-resolution: 144dpi),
          (min-resolution: 1.5dppx) {
-    background-image: url("../img/hero-mobile@2x.jpg 2x");
+    background-image: #f9f9f9 url("../img/hero-mobile@2x.jpg 2x");
     background-size: 320px auto;
   }
 
@@ -38,23 +38,75 @@
   line-height: 24px;
   color: @white-color;
   .font-bold();
-  padding: 26px 35px 29px 30px;
+  padding: 25px 35px 30px 30px;
+
+  &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    top: -5px;
+    right: 0px;
+    height: 5px;
+    width: 100%;
+    background-color: inherit;
+  }
+}
+
+.our-products__btn--interior,
+.our-products__btn--toys {
+
+  svg {
+    position: absolute;
+    opacity: 0.5;
+    fill: #149080;
+  }
+
+  &:hover {
+    padding: 20px 35px 35px 30px;
+
+    &::after {
+      display: block;
+    }
+
+    svg {
+      opacity: 0.7;
+    }
+    
+  }
+
+  &:active {
+
+    svg {
+      opacity: 0.3;
+    }
+    
+  }
+
 }
 
 .our-products__btn--interior {
   position: relative;
   background-color: #63d1bb;
 
-  &:after {
-    content: "";
-    position: absolute;
-    z-index: 1;
+  &:hover {
+    background-color: #59d5bc;
+
+  }
+
+  &:active {
+    background-color: #59d5bc;
+    color: rgba(255,255,255, 0.3);
+  }
+
+  svg {
     top: 23px;
     right: 35px;
-    width: 40px;
-    height: 62px;
-    background-image: url("../img/icon-interior.svg");
-    opacity: 0.5;
+  }
+
+  &:hover {
+    svg {
+    top: 18px;
+    }
   }
 
 }
@@ -63,30 +115,39 @@
   position: relative;
   background-color: #56c3b2;
 
-  &:after {
-    content: "";
-    position: absolute;
-    z-index: 1;
+  &:hover {
+    background-color: #46c1ae;
+  }
+
+  &:active {
+    background-color: #46c1ae;
+    color: rgba(255,255,255, 0.3);
+  }
+
+  svg {
     top: 22px;
     right: 27px;
-    width: 60px;
-    height: 60px;
-    background-image: url("../img/icon-toy.svg");
-    opacity: 0.5;
+  }
+
+  &:hover {
+    svg {
+    top: 17px;
+    }
   }
 
 }
+
 
 @media @tablet-widths {
 
   .our-products {
     min-height: 743px;
-    background: url("../img/hero-desktop@1x.jpg") no-repeat center;
+    background: #f9f9f9 url("../img/hero-desktop@1x.jpg") no-repeat center;
     background-size: cover;
     .clearfix();
     margin-bottom: 30px;
 
-    &:after {
+    &::after {
       content: "";
       position: absolute;
       z-index: 1;
@@ -94,7 +155,8 @@
       left: 0;
       width: 100%;
       height: 11px;
-      background: url("../img/zigzag.png");
+      background: url("../img/bg-zigzag-fill.svg");
+      background-size: auto 24px;
       background-repeat: repeat-x;
     }
 
@@ -142,7 +204,15 @@
 
   .our-products__btn--interior {
 
-    &:after {
+    &:hover {
+      padding: 20px 35px 35px 36px;
+
+      svg {
+        top: 25px;
+      }
+    }
+
+    svg {
       top: 30px;
       right: 36px;
     }
@@ -150,10 +220,16 @@
   }
 
   .our-products__btn--toys {
-    position: relative;
-    background-color: #56c3b2;
 
-    &:after {
+    &:hover {
+      padding: 20px 35px 35px 37px;
+
+      svg {
+        top: 26px;
+      }
+    }
+
+    svg {
       top: 31px;
       right: 34px;
     }
@@ -168,22 +244,14 @@
     margin-bottom: 73px;
     background-size: 1150px 746px;
 
-    &:after {
-      content: "";
-      position: absolute;
-      z-index: 1;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 16px;
-      background: url("../img/zigzag.png");
-      background-size: 10%;
-      background-repeat: repeat-x;
+    &::after {
+      height: 17px;
+      background-size: auto 34px;
     }
 
     @media (min-width: 1150px) and (min-resolution: 144dpi),
            (min-width: 1150px) and (min-resolution: 1.5dppx) {
-      background-image: url("../img/hero-desktop@2x.jpg 2x");
+      background-image: #f9f9f9 url("../img/hero-desktop@2x.jpg 2x");
       background-size: 1150px 746px;
     }
 
@@ -191,6 +259,10 @@
 
   .our-products__btn--interior {
     padding-left: 39px;
+
+    &:hover {
+      padding: 20px 35px 35px 39px;
+    }
   }
 
   .our-products__header {
