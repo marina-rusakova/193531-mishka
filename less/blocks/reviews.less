@@ -13,8 +13,8 @@
     left: 0;
     width: 100%;
     height: 7px;
-    background: url("../img/zigzag-line.png");
-    background-size: 10%;
+    background: url("../img/bg-zigzag-line.svg");
+    background-size: auto 7px;
     background-repeat: repeat-x;
   }
 
@@ -59,17 +59,48 @@
 
 .reviews__btn-slider {
   .inline-block();
-  height: 52px;
-  background-color: @white-color;
-  border: 1px solid #ececec;
-  width: 50%;
+    height: 52px;
+    background-color: @white-color;
+    border: 1px solid #ececec;
+    width: 50%;
+    padding: 0;
+    outline: 0;
+    cursor: pointer;
+
+  &:before {
+    content: "";
+    display: block;
+    height: 26px;
+    width: 50px;
+    margin-left: 37px;
+  }
+
+  &:hover {
+
+    &:before {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+
+    &:before {
+      opacity: 0.3;
+    }
+  }
+
 
   &--preview {
-    background: url("../img/icon-left-arrow.svg") no-repeat  50% 50%;
+    &:before {
+      background: url("../img/icon-left-arrow.svg") no-repeat 50% 50%;
+    }
+
   }
 
   &--next {
-    background: url("../img/icon-right-arrow.svg") no-repeat 50% 50%;
+    &:before {
+      background: url("../img/icon-right-arrow.svg") no-repeat 50% 50%;
+    }
   }
 
 }
@@ -82,8 +113,15 @@
     padding-bottom: 85px;
     background:  url("../img/review@1x.jpg") no-repeat 0 0;
 
+    @media  (min-resolution: 144dpi),
+            (min-resolution: 1.5dppx) {
+    background-image: url("../img/review@2x.jpg 2x");
+    background-size: 350px 457px;
+  }
+
     &:after {
       height: 17px;
+      background-size: auto 17px;
     }
 
   }
@@ -108,9 +146,18 @@
     width: 334px;
   }
 
+  .reviews__btns {
+    float: right;
+    width: 175px;
+  }
+
   .reviews__btn-slider {
     margin-top: 6px;
     border: none;
+
+    &:before {
+    margin-left: 19px;
+    }
   }
 
   .reviews__btn {
@@ -122,29 +169,31 @@
       padding: 16px 38px;
     }
   }
-
-  .reviews__btns {
-    float: right;
-    width: 175px;
-  }
-
 }
 
 @media @desktop-widths {
 
   .reviews {
     /*margin-bottom: 80px;*/
-    background-position-x: 50px;
+    background: @white-color;
     padding-bottom: 90px;
 
     &:after {
       height: 24px;
+      background-size: auto 24px;
     }
 
   }
 
   .reviews__wrapper {
     .container-right();
+    background:  url("../img/review@1x.jpg") no-repeat 0 0;
+
+    @media  (min-resolution: 144dpi),
+            (min-resolution: 1.5dppx) {
+      background-image: url("../img/review@2x.jpg 2x");
+      background-size: 350px 457px;
+    }
   }
 
   .reviews__title {

@@ -10,10 +10,8 @@
   .clearfix();
 }
 
-.page-footer__social {
-  min-height: 80px;
-  text-align: center;
-  /*.visual-y();*/
+.page-footer__logo {
+  display: none;
 }
 
 .page-footer__social {
@@ -21,64 +19,85 @@
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
-  width: 150px;
+  width: 141px;
+  min-height: 80px;
   padding-right: 5px;
   font-size: 0;
-}
-
-.social-link__item {
-  .inline-block();
-  width: 32px;
-  height: 34px;
 }
 
 .social-link {
   display: inline-block;
   vertical-align: middle;
+  width: 24px;
+  height: 27px;
+
+  svg {
+    fill: #231F20;
+
+    &:hover {
+      fill: #46c1ae;
+    }
+
+    &:active {
+      fill: #46c1ae;
+      opacity: 0.3;
+    }
+  }
 
   &--inst {
     width: 22px;
-    height: 21px;
-    background: url("../img/icon-insta.svg");
+    height: 22px;
   }
 
   &--fb {
-    width: 15px;
-    height: 28px;
-    background: url("../img/icon-fb.svg");
+    width: 14px;
+    height: 32px;
   }
 
   &--tw {
-    width: 23px;
-    height: 20px;
-    background: url("../img/icon-twitter.svg");
+    width: 24px;
+    height: 22px;
   }
 
 }
 
 .page-footer__copyright {
-  position: relative;
   min-height: 79px;
   border-top: 1px solid #cecece;
   /*.visual-b();*/
 }
 
 .copyright__link {
+  position: relative;
   text-decoration: none;
   color: @black-color;
+  vertical-align: middle;
   font-size: 19px;
   line-height: 18px;
   .font-bold();
 
-  &:after {
-    content: "";
+  &:hover svg{
+    fill: #46c1ae;
+  }
+
+  &:active {
+    p {
+      opacity: 0.3;
+    }
+
+    svg {
+      fill: #46c1ae;
+      opacity: 0.3;
+    }
+  }
+
+  svg {
     position: absolute;
-    z-index: 1;
-    top: 18px;
-    right: 33px;
-    width: 40px;
-    height: 40px;
-    background: url("../img/htmlacademy.svg");
+    top: 21px;
+    left: 195px;
+    width: 27px;
+    height: 34px;
+    fill: #46c1ae;
   }
 
   p {
@@ -100,13 +119,14 @@
   }
 
   .page-footer__logo {
+    display: block;
     width: 86px;
     height: 35px;
-    background: url("../img/logo-mobile.svg") no-repeat;
+    padding-bottom: 5px;
   }
 
   .page-footer__social {
-    margin-left: 170px;
+    margin-left: 175px;
     padding-top: 34px;
     padding-bottom: 29px;
   }
@@ -117,15 +137,16 @@
     border-top: none;
 
     p {
-      padding-top: 10px;
+      padding-top: 11px;
       padding-left: 0;
     }
   }
 
   .copyright__link {
-    &:after {
-      top: 0px;
-      right: -7px;
+
+    svg {
+      top: 6px;
+      left: 155px;
     }
   }
 }
@@ -133,7 +154,7 @@
 @media @desktop-widths {
 
   .page-footer__social {
-    margin-left: 361px;
+    margin-left: 366px;
   }
 
 }
