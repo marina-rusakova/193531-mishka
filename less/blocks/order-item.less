@@ -5,22 +5,53 @@ input[type="radio"] {
   padding: 0;
 }
 
-input[type="radio"] + label::before {
-  content: "";
-  display: inline-block;
-  vertical-align: middle;
-  height: 36px;
-  width: 36px;
-  border: 2px solid #444444;
-  border-radius: 50%;
-  margin-right: 22px;
+.order-item__control {
+
+  input[type="radio"] + label::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 36px;
+    width: 36px;
+    border: 2px solid #444444;
+    border-radius: 50%;
+    margin-right: 22px;
+    cursor: pointer;
+  }
+
+  input[type="radio"] + label:hover::before {
+    border: 2px solid @blue-color;
+  }
+
+  input[type="radio"] + label:active::before {
+    border: 2px solid rgba(68, 68, 68, 0.3);
+    box-shadow:
+      inset 0 0 0 10px @white-color,
+      inset 0 0 0 35px @blue-color;
+  }
+
+  input[type="radio"]:checked + label::before {
+    box-shadow:
+      inset 0 0 0 10px @white-color,
+      inset 0 0 0 35px @blue-color;
+  }
+
+  input[type="radio"]:checked + label:hover::before {
+    border: 2px solid @blue-color;
+    box-shadow:
+      inset 0 0 0 10px @white-color,
+      inset 0 0 0 35px @blue-color;
+  }
+
+  input[type="radio"]:checked + label:active::before {
+    border: 2px solid rgba(68, 68, 68, 0.3);
+    box-shadow:
+      inset 0 0 0 0px @white-color,
+      inset 0 0 0 0px @blue-color;
+  }
+
 }
 
-input[type="radio"]:checked + label::before {
-  box-shadow:
-    inset 0 0 0 10px @white-color,
-    inset 0 0 0 35px @blue-color;
-}
 
 input[type="checkbox"] + label::before {
   content: "";
@@ -30,11 +61,33 @@ input[type="checkbox"] + label::before {
   width: 36px;
   border: 2px solid #444444;
   margin-right: 22px;
+  cursor: pointer;
+}
+
+input[type="checkbox"] + label:hover::before {
+  border: 2px solid @blue-color;
+}
+
+input[type="checkbox"] + label:active::before {
+  border: 2px solid rgba(68, 68, 68, 0.3);
+  background: url("../img/icon-tick.svg") no-repeat 50% 50%;
+  background-size: 68%;
 }
 
 input[type="checkbox"]:checked + label::before {
   background: url("../img/icon-tick.svg") no-repeat 50% 50%;
   background-size: 68%;
+}
+
+input[type="checkbox"]:checked + label:hover::before {
+  border: 2px solid @blue-color;
+  background: url("../img/icon-tick.svg") no-repeat 50% 50%;
+  background-size: 68%;
+}
+
+input[type="checkbox"]:checked + label:active::before {
+  border: 2px solid rgba(68, 68, 68, 0.3);
+  background: none;
 }
 
 .order-item__title {
@@ -111,6 +164,21 @@ input[type="checkbox"]:checked + label::before {
 
   .order-item__control {
     /*background-color: red;*/
+    border-bottom: 2px solid @black-color;
+
+    &:hover {
+      border-bottom: 2px solid @blue-color;
+    }
+
+    &:focus {
+      border-bottom: 2px solid @blue-color;
+    }
+  }
+
+  label {
+    padding-bottom: 12px;
+    border-bottom: 4px solid @white-color;
+    padding-right: 25px;
   }
 
   .order-item__field {
@@ -120,7 +188,6 @@ input[type="checkbox"]:checked + label::before {
     line-height: 18px;
     outline: none;
     border: none;
-    border-bottom: 2px solid @black-color;
     font-family: 'Open Sans';
   }
 
@@ -135,8 +202,27 @@ input[type="checkbox"]:checked + label::before {
   margin-bottom: 32px;
 
   .order-item__control {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     /*background-color: red;*/
     border-bottom: 2px solid @black-color;
+
+    &:hover {
+      border-bottom: 2px solid @blue-color;
+      svg {
+        fill: @blue-color;
+      }
+
+    }
+
+    &:focus {
+      border-bottom: 2px solid @blue-color;
+      svg {
+        fill: @blue-color;
+      }
+    }
   }
 
   .order-item__field {
@@ -149,29 +235,18 @@ input[type="checkbox"]:checked + label::before {
   }
 }
 
-.order-item--tel  .order-item__control {
-
-  &:after {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    height: 40px;
-    width: 32px;
-    background: url("../img/icon-phone.svg") no-repeat;
-    background-position: 0px 5px;
+.order-item--tel   {
+  svg {
+    margin-right: 8px;
+    margin-bottom: 6px;
+    fill: rgba(0, 0, 0, 0.2);
   }
 }
 
-.order-item--mail  .order-item__control {
-
-  &:after {
-    content: "";
-    display: inline-block;
-    vertical-align: middle;
-    height: 40px;
-    width: 32px;
-    background: url("../img/icon-mail.svg") no-repeat;
-    background-position: 0px 5px;
+.order-item--mail   {
+  svg {
+    margin-right: 4px;
+    fill: rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -193,6 +268,32 @@ input[type="checkbox"]:checked + label::before {
     padding: 15px;
     border: 2px solid @black-color;
     font-family: 'Open Sans';
+    outline: none;
+
+    &:hover {
+      border: 2px solid @blue-color;
+    }
+
+    &:active {
+      border: 2px solid @blue-color;
+    }
+  }
+}
+
+@media @mobile-widths-only {
+
+  .order-item__title {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 7px;
+      right: 0px;
+      height: 1px;
+      width: 198px;
+      background-color: @blue-color;
+    }
   }
 }
 
@@ -201,7 +302,7 @@ input[type="checkbox"]:checked + label::before {
 @media @tablet-widths {
 
   .order-item__title {
-    padding-top: 16px;
+    padding-top: 17px;
     width: 167px;
   }
 
@@ -244,17 +345,36 @@ input[type="checkbox"]:checked + label::before {
     width: 501px;
   }
 
-  input[type="radio"] + label::before {
-    height: 48px;
-    width: 48px;
-    margin-right: 29px;
+  .order-item__control {
+
+    input[type="radio"] + label::before {
+      height: 48px;
+      width: 48px;
+      margin-right: 29px;
+    }
+
+    input[type="radio"]:checked + label::before {
+      box-shadow:
+        inset 0 0 0 14px @white-color,
+        inset 0 0 0 48px @blue-color;
+    }
+
+    input[type="radio"] + label:active::before {
+      border: 2px solid rgba(68, 68, 68, 0.3);
+      box-shadow:
+        inset 0 0 0 14px @white-color,
+        inset 0 0 0 48px @blue-color;
+    }
+
+    input[type="radio"]:checked + label:hover::before {
+      border: 2px solid @blue-color;
+      box-shadow:
+        inset 0 0 0 14px @white-color,
+        inset 0 0 0 48px @blue-color;
+    }
+
   }
 
-  input[type="radio"]:checked + label::before {
-    box-shadow:
-      inset 0 0 0 14px @white-color,
-      inset 0 0 0 48px @blue-color;
-  }
 
   .order-item-wrapper {
     padding: 50px 0;
@@ -325,18 +445,28 @@ input[type="checkbox"]:checked + label::before {
       border-bottom: 2px solid @black-color;
     }
 
-    label {
-      margin-right: 40px;
-    }
-
     .order-item__field {
-      width: auto;
-      font-size: 17px;
-      line-height: 30px;
+      width: 350px;
+      font-size: 19px;
+      line-height: 18px;
+      margin-left: 12px;
       font-family: 'Open Sans';
       border: none;
     }
 
+  }
+
+  .order-item--tel   {
+    svg {
+      margin-right: 26px;
+    }
+  }
+
+  .order-item--mail   {
+    svg {
+      margin-right: 22px;
+      margin-bottom: 0px;
+    }
   }
 
   .order-item--tel,
@@ -352,18 +482,13 @@ input[type="checkbox"]:checked + label::before {
       flex-direction: row;
       justify-content: space-between;
       width: 501px;
-
-      &:after {
-        margin-right: 22px;
-        margin-top: 5px;
-      }
     }
 
     .order-item__field {
       width: 400px;
       font-size: 19px;
       line-height: 18px;
-      margin-left: 19px;
+      margin-left: 15px;
       font-family: 'Open Sans';
       background-color: #f1f1f1;
     }
@@ -443,6 +568,18 @@ input[type="checkbox"]:checked + label::before {
       width: 550px;
     }
 
+  }
+
+  .order-item--tel   {
+    svg {
+      margin-right: 10px;
+    }
+  }
+
+  .order-item--mail   {
+    svg {
+      margin-right: 6px;
+    }
   }
 
   .order-item--tel,
