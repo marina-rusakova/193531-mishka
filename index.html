@@ -5,6 +5,7 @@
   <title>Магазин "Мишка"</title>
   <link href="css/normalize.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/picturefill.js"></script>
 </head>
 <body>
 
@@ -105,7 +106,9 @@
     </section>
     <section class="product-week">
       <div class="product-week__header">
-        <h2 class="product-week__title">Вязаные корзинки</h2>
+        <div class="product-week__title">
+          <h2>Вязаные корзинки</h2>
+        </div>
         <span class="product-week__topic">товар недели</span>
       </div>
 
@@ -219,8 +222,10 @@
 
     <section class="reviews">
       <div class="reviews__wrapper">
-        <h2 class="reviews__title">Отзывы</h2>
-
+        <div class="reviews__title">
+          <h2>Отзывы</h2>
+        </div>
+        
         <p class="reviews__comment">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксеcсуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
 
         <div class="reviews__item">
@@ -257,16 +262,8 @@
       </div>
 
       <div class="contacts__map">
-        <div class="contacts__map-marker">
-          <img src="img/icon-map-pin.svg" width="67" height="100" alt="маркер">
-        </div>
-        <div>
-          <picture>
-            <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
-            <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
-            <img src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x"  alt="Месторасположение">
-          </picture>
-        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.5816132256264!2d30.3210448!3d59.9390844!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0KDQvtGB0YHQuNGPLCAxOTExODY!5e0!3m2!1sru!2sus!4v1482365561816" allowfullscreen>
+        </iframe>
       </div>
 
       <div class="contacts__wrapper">
