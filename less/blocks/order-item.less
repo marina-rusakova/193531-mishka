@@ -102,7 +102,10 @@ input[type="checkbox"]:checked + label:active::before {
   color: @black-color;
   font-size: 17px;
   line-height: 18px;
-  .font-bold();
+  
+  label {
+    .font-bold();
+  }
 }
 
 .order-item--type {
@@ -200,7 +203,6 @@ input[type="checkbox"]:checked + label:active::before {
     line-height: 18px;
     outline: none;
     border: none;
-    font-family: 'Open Sans';
   }
 
 }
@@ -217,22 +219,7 @@ input[type="checkbox"]:checked + label:active::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid @black-color;
-
-    &:hover {
-      border-bottom: 2px solid @blue-color;
-      svg {
-        fill: @blue-color;
-      }
-
-    }
-
-    &:focus {
-      border-bottom: 2px solid @blue-color;
-      svg {
-        fill: @blue-color;
-      }
-    }
+    border-bottom: 2px solid @black-color;  
   }
 
   .order-item__field {
@@ -241,7 +228,25 @@ input[type="checkbox"]:checked + label:active::before {
     line-height: 18px;
     outline: none;
     border: none;
-    font-family: 'Open Sans';
+  }
+}
+
+.order-item__control--tel,
+.order-item__control--mail {
+
+  &:hover {
+    border-bottom: 2px solid @blue-color;
+    svg {
+      fill: @blue-color;
+    }
+
+  }
+
+  &:focus {
+    border-bottom: 2px solid @blue-color;
+    svg {
+      fill: @blue-color;
+    }
   }
 }
 
@@ -278,7 +283,7 @@ input[type="checkbox"]:checked + label:active::before {
   margin-bottom: 14px;
 
   .order-item__title {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
   .order-item__field {
@@ -289,7 +294,6 @@ input[type="checkbox"]:checked + label:active::before {
     line-height: 18px;
     padding: 15px;
     border: 2px solid @black-color;
-    font-family: 'Open Sans';
     outline: none;
 
     &:hover {
@@ -474,7 +478,6 @@ input[type="checkbox"]:checked + label:active::before {
       font-size: 19px;
       line-height: 18px;
       margin-left: 12px;
-      font-family: 'Open Sans';
       border: none;
     }
 
@@ -513,7 +516,6 @@ input[type="checkbox"]:checked + label:active::before {
       font-size: 19px;
       line-height: 18px;
       margin-left: 15px;
-      font-family: 'Open Sans';
       background-color: #f1f1f1;
     }
   }
@@ -537,7 +539,6 @@ input[type="checkbox"]:checked + label:active::before {
       width: 467px;
       font-size: 19px;
       line-height: 18px;
-      font-family: 'Open Sans';
     }
 
   }

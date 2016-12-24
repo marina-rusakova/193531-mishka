@@ -24,10 +24,15 @@
 
   ul {
     display: table-row;
+    height: 60px;
   }
 
   li {
     display: table-cell;
+  }
+
+  li:first-child {
+    width: 77px;
   }
 }
 
@@ -57,14 +62,6 @@
     color: #46c1ae;
     opacity: 0.3;
   }
-}
-
-.column {
-  width: 77px;
-}
-
-.row {
-  height: 60px;
 }
 
 .contacts__map {
@@ -112,15 +109,12 @@ iframe {
 
   .contacts__information {
     font-size: 17px;
-    .column {
-      width: 73px;
-    }
-    .row {
-      width: 329px;
-    }
 
-    .column2 {
+    li:first-child {
       width: 72px;
+    }
+    ul {
+      width: 329px;
     }
   }
 
@@ -192,7 +186,7 @@ iframe {
       display: table-cell;
     }
 
-    .column {
+    li:first-child {
       width: 77px;
     }
 
