@@ -19,12 +19,14 @@
   min-height: 192px;
   padding-top: 70px;
   padding-bottom: 20px;
+
+  h1 {
+    .font-bold();
+    .font-h1();
+    text-align: center;
+  }
 }
 
-.our-products__title {
-  .font-h1();
-  text-align: center;
-}
 
 .our-products__btns--wrapper {
   font-size: 0;
@@ -49,10 +51,6 @@
     width: 100%;
     background-color: inherit;
   }
-}
-
-.our-products__btn--interior,
-.our-products__btn--toys {
 
   svg {
     position: absolute;
@@ -78,9 +76,7 @@
     svg {
       opacity: 0.3;
     }
-
   }
-
 }
 
 .our-products__btn--interior {
@@ -174,11 +170,11 @@
   .our-products__header {
     min-height: 453px;
     padding-top: 153px;
-  }
 
-  .our-products__title {
-    font-size: 43px;
-    line-height: 50px;
+    h1 {
+      font-size: 43px;
+      line-height: 50px;
+    }
   }
 
   .our-products__btns {
@@ -204,7 +200,7 @@
   .our-products__btn--interior {
 
     &:hover {
-      padding: 20px 35px 35px 36px;
+      padding: 20px 35px 37px 36px;
 
       svg {
         top: 25px;
@@ -221,7 +217,7 @@
   .our-products__btn--toys {
 
     &:hover {
-      padding: 20px 35px 35px 37px;
+      padding: 20px 35px 37px 37px;
 
       svg {
         top: 26px;
@@ -267,11 +263,10 @@
   .our-products__header {
     min-height: 453px;
     padding-top: 153px;
-  }
 
-  .our-products__title {
-    font-size: 53px;
-    line-height: 57px;
+    h1 {
+      font-size: 53px;
+      line-height: 57px;
+    }
   }
-
 }
