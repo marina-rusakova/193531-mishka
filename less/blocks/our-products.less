@@ -7,23 +7,23 @@
 
   @media  (min-resolution: 144dpi),
           (min-resolution: 1.5dppx) {
-    background-image: #f9f9f9 url("../img/hero-mobile@2x.jpg 2x");
+    background-image: #f9f9f9 url("../img/hero-mobile@2x.jpg");
     background-size: 320px auto;
   }
 
 }
 
-.our-products__header {
-  .font-bold();
-  .container();
-  min-height: 192px;
-  padding-top: 70px;
-  padding-bottom: 20px;
+.our-products__wrapper {
 
   h1 {
+    min-height: 192px;
+    width: 244px;
+    padding-top: 70px;
+    padding-bottom: 20px;
     .font-bold();
     .font-h1();
     text-align: center;
+    margin: 0 auto;
   }
 }
 
@@ -157,7 +157,7 @@
 
     @media  (min-width: 768px) and (min-resolution: 144dpi),
             (min-width: 768px) and (min-resolution: 1.5dppx) {
-      background-image: url("../img/hero-desktop@2x.jpg 2x");
+      background-image: url("../img/hero-desktop@2x.jpg");
       background-size: cover;
     }
 
@@ -165,13 +165,11 @@
 
   .our-products__wrapper {
     .container();
-  }
-
-  .our-products__header {
-    min-height: 453px;
-    padding-top: 153px;
-
+    
     h1 {
+      min-height: 453px;
+      width: auto;
+      padding-top: 153px;
       font-size: 43px;
       line-height: 50px;
     }
@@ -246,7 +244,7 @@
 
     @media  (min-width: 1150px) and (min-resolution: 144dpi),
             (min-width: 1150px) and (min-resolution: 1.5dppx) {
-      background-image: #f9f9f9 url("../img/hero-desktop@2x.jpg 2x");
+      background-image: #f9f9f9 url("../img/hero-desktop@2x.jpg");
       background-size: 1150px 746px;
     }
 
@@ -260,11 +258,12 @@
     }
   }
 
-  .our-products__header {
-    min-height: 453px;
-    padding-top: 153px;
+  .our-products__wrapper {
 
     h1 {
+      min-height: 453px;
+      width: auto;
+      padding-top: 153px;
       font-size: 53px;
       line-height: 57px;
     }
