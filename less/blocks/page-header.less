@@ -24,12 +24,23 @@
 
 @media @tablet-widths {
 
+  .page-header {
+    height: 88px;
+  }
+
   .page-header__logo {
+    order: 1;
+    align-self: center;
     width: 113px;
     height: 46px;
     padding: 0;
     margin: 0;
     margin-right: auto;
+
+    img {
+      width: 113px;
+      height: 46px;
+    }
   }
 
 }
@@ -37,9 +48,15 @@
 @media @desktop-widths {
 
   .page-header__logo {
+    order: 2;
     width: 175px;
     height: 72px;
     margin: 0 auto;
+
+    img {
+      width: 175px;
+      height: 72px;
+    }
   }
 
 }
